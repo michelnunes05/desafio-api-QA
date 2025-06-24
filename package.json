@@ -1,19 +1,28 @@
 {
   "name": "desafio-api-qa",
   "version": "1.0.0",
+  "description": "Automação de testes de API com Jest - ServeRest",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:auth": "jest tests/auth",
+    "test:users": "jest tests/users",
+    "test:products": "jest tests/products",
+    "test:carts": "jest tests/carts",
+    "test:report": "jest --reporters=jest-html-reporters",
+    "test:critical": "jest --testNamePattern='crítico|critical'",
+    "test:ci": "jest --ci --coverage --watchAll=false"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["api", "testing", "jest", "qa", "automation"],
+  "author": "Michel Nunes",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "@jest/globals": "^30.0.2",
-    "axios": "^1.10.0",
-    "dotenv": "^16.5.0",
-    "jest": "^30.0.2",
-    "jest-html-reporters": "^3.1.7"
+    "@jest/globals": "^29.7.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "jest": "^29.7.0",
+    "jest-html-reporters": "^3.1.5"
   }
 }
